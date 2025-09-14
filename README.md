@@ -2,6 +2,7 @@
 
 A modern, responsive web application that helps users find the best renewable energy solution for their specific location based on coordinates.
 
+Made using Cursor with Claude 4 Sonnet
 ## Features
 
 - **Interactive Location Input**: Enter coordinates manually or use current location
