@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renewable Energy Optimizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-leaf"></i> Renewable Energy Optimizer</h1>
+            <p>Find the best renewable energy solution for your location</p>
+        </header>
+
+        <main class="main-content">
+            <div class="input-section">
+                <div class="input-card">
+                    <h2><i class="fas fa-map-marker-alt"></i> Select Your Location</h2>
+                    <div class="input-group">
+                        <label for="state">State</label>
+                        <select id="state" required>
+                            <option value="">Select a state...</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="county">County</label>
+                        <select id="county" disabled>
+                            <option value="">Select a county...</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="city">City</label>
+                        <select id="city" disabled>
+                            <option value="">Select a city...</option>
+                        </select>
+                    </div>
+                    <div class="button-group">
+                        <button id="getLocationBtn" class="btn btn-secondary">
+                            <i class="fas fa-location-arrow"></i> Use Current Location
+                        </button>
+                        <button id="analyzeBtn" class="btn btn-primary" disabled>
+                            <i class="fas fa-search"></i> Analyze Location
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <div class="results-header">
+                    <h2><i class="fas fa-chart-line"></i> Energy Analysis Results</h2>
+                    <div class="location-display" id="locationDisplay"></div>
+                </div>
+                
+                <div class="energy-cards" id="energyCards">
+                    <!-- Energy cards will be dynamically generated -->
+                </div>
+
+                <div class="recommendation" id="recommendation">
+                    <!-- Best recommendation will be displayed here -->
+                </div>
+            </div>
+
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Analyzing your location...</p>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Renewable Energy Optimizer. Built with ❤️ for a sustainable future.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
